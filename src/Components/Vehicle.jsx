@@ -1,10 +1,15 @@
-
+import { useBox } from "@react-three/cannon"
 
 const Vehicle = () => {
 
+    const [ref] = useBox(() => ({
+        mass: 1,
+        position: [0,3,0]
+    }))
+
     return(
         <>
-            <mesh position-y={0.7} castShadow>
+            <mesh castShadow ref={ref}>
                 <boxGeometry/>
                 <meshStandardMaterial/>
             </mesh>
