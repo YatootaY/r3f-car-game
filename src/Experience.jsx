@@ -2,7 +2,7 @@ import {OrbitControls} from "@react-three/drei"
 import Ground from "./Components/Ground"
 import Lights from "./Components/Lights"
 import Vehicle from "./Components/Vehicle/Vehicle"
-import { Physics, Debug } from "@react-three/cannon"
+import { Physics } from "@react-three/cannon"
 
 const Experience = () => {
 
@@ -13,11 +13,8 @@ const Experience = () => {
             <Lights/>
 
             <Physics>
-                <Debug>
-                    <Vehicle/>
-                    <Ground/>
-                </Debug>
-                
+                <Vehicle/>
+                <Ground/>
             </Physics>
 
         </>

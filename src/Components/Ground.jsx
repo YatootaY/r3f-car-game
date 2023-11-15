@@ -2,7 +2,10 @@ import { usePlane } from "@react-three/cannon"
 
 const Ground = () => {
 
-    const [ref] = usePlane(() => ({rotation: [-Math.PI / 2, 0,0]}))
+    const [ref] = usePlane(() => ({
+        type: "Static",
+        rotation: [-Math.PI / 2, 0,0]}
+        ))
 
     return(
         <>

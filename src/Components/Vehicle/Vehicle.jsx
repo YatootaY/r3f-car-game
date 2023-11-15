@@ -2,7 +2,7 @@
 import { useBox, useRaycastVehicle } from "@react-three/cannon"
 import { useRef } from "react"
 import { useGLTF, useKeyboardControls, Center } from "@react-three/drei"
-import useWheels from "../useWheels"
+import useWheels from "./useWheels"
 import { useFrame } from "@react-three/fiber"
 
 const Vehicle = () => {
@@ -12,7 +12,7 @@ const Vehicle = () => {
     const width = 1.5
     const height = 1
     const front = 1.4
-    const position = [0,1,0]
+    const position = [0,10,0]
     const wheelRadius = 0.3;
 
     const chassisBodyArgs = [width, height, front * 2]
@@ -29,7 +29,7 @@ const Vehicle = () => {
     const [vehicle, vehicleApi] = useRaycastVehicle(() => ({
         chassisBody,
         wheelInfos,
-        wheels
+        wheels,
     }), useRef())
 
     const [subscribeKey, getKeys] = useKeyboardControls()
