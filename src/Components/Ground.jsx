@@ -10,7 +10,7 @@ const Ground = () => {
     return(
         <>
             <mesh receiveShadow ref={ref}>
-                <planeGeometry args={[50,50]}/>
+                <planeGeometry args={[40,40]}/>
                 <meshStandardMaterial color="#f79000"/>
             </mesh>
         </>

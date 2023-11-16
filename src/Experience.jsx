@@ -13,15 +13,16 @@ const Experience = () => {
             <OrbitControls makeDefault/>
             
             <Lights/>
-
             <Physics>
                 <Debug>
                     <Vehicle/>
                     <Farm/>
                     <Text/>
                     <Ground/>
-                </Debug>  
+                </Debug>
             </Physics>
+
+            
 
         </>
     )

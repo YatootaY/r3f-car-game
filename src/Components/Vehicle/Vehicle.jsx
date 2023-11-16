@@ -62,6 +62,7 @@ const Vehicle = () => {
         const brakeMultipler = brake ? 1e5 : 0;
         vehicleApi.setBrake(brakeMultipler, 1);
         vehicleApi.setBrake(brakeMultipler, 0);
+        
     })
 
     return(
