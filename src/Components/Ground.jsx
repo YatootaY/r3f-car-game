@@ -1,5 +1,5 @@
 import { usePlane } from "@react-three/cannon"
-import Building from "./Building"
+import Farm from "./Farm"
 
 const Ground = () => {
 
@@ -14,10 +14,7 @@ const Ground = () => {
                 <planeGeometry args={[50,50]}/>
                 <meshStandardMaterial color="orange"/>
             </mesh>
-            <Building position={[10,2,10]}/>
-            <Building position={[-10,2,-10]}/>
-            <Building position={[15,2,1]}/>
-            <Building position={[-15,2,1]}/>
+            <Farm/>
         </>
     )
 }
