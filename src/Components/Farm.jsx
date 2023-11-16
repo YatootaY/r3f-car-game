@@ -1,11 +1,15 @@
 import { useBox } from "@react-three/cannon"
 import { useGLTF } from "@react-three/drei"
+import { useFrame } from "@react-three/fiber"
+import { useRef } from "react"
 
 
 const Farm = () => {
 
     const {nodes} = useGLTF("./assets/farm.gltf")
-    
+    const fan = useRef()
+    const plane = useRef()
+
     const [barn] = useBox(() => ({
         args: [3,4,5],
         position:[0,2,0],
@@ -36,12 +40,18 @@ const Farm = () => {
         position: [1.7,0.4,-12.35]
     }))
 
+    useFrame((state, delta) => {
+        const elapsedTime = state.clock.elapsedTime
+        fan.current.rotation.z += delta
+        plane.current.rotation.y = Math.sin(elapsedTime * 5) * 0.2
+    })
+
     return(
         <>
             <mesh scale={5} ref={barn}>
                 <group>
                     <mesh {...nodes.Barn_01} position={[0,0,0]}/>
-                    <mesh {...nodes.Plane} position={[0,0.63,0.5]}/>
+                    <mesh {...nodes.Plane} position={[0,0.63,0.5]} ref={plane}/>
                 </group>
             </mesh>
 
@@ -58,7 +68,7 @@ const Farm = () => {
             <mesh scale={5} ref={windMill}>
                 <group >
                     <mesh {...nodes.WindMill} position={[0,0.4,0.1]}/>
-                    <mesh {...nodes.WindMill001}  position={[0,0.7,0.2]}/>
+                    <mesh {...nodes.WindMill001}  position={[0,0.7,0.2]} ref={fan}/>
                 </group>
             </mesh>
             

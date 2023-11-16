@@ -1,5 +1,4 @@
 import { useBox } from "@react-three/cannon"
-import { useControls } from "leva"
 
 const Walls = () => {
 

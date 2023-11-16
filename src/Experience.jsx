@@ -14,10 +14,12 @@ const Experience = () => {
             
             <Lights/>
             <Physics>
+                <Debug>
                     <Vehicle/>
                     <Farm/>
                     <Text/>
                     <Ground/>
+                </Debug>
             </Physics>
 
             
