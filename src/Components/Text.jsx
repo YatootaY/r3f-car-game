@@ -6,44 +6,50 @@ const Text = () => {
     const [text1] = useBox(() => ({
         mass: 1,
         position: [-0.2,1,7],
-        args: [1.2,1,0.5]
+        args: [1.2,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     const [text2] = useBox(() => ({
         mass: 1,
-        position: [1,1,7],
-        args: [0.8,1,0.5]
+        position: [1,1,6],
+        args: [0.8,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     const [text3] = useBox(() => ({
         mass: 1,
-        position: [2,1,7],
+        position: [2,1,5],
         args: [0.8,1,0.5],
-        rotation: [12,0,0]
+        rotation: [-30, Math.PI/4,0]
     }))
 
     const [text4] = useBox(() => ({
         mass: 1,
-        position: [3,1,7],
-        args: [0.8,1,0.5]
+        position: [3,1,4],
+        args: [0.8,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     const [text5] = useBox(() => ({
         mass: 1,
-        position: [4.1,1,7],
-        args: [1,1,0.5]
+        position: [4.1,1,3],
+        args: [1,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     const [text6] = useBox(() => ({
         mass: 1,
-        position: [5.3,1,7],
-        args: [1,1,0.5]
+        position: [5.3,1,2],
+        args: [1,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     const [text7] = useBox(() => ({
         mass: 1,
-        position: [6.3,1,7],
-        args: [0.7,1,0.5]
+        position: [6.3,1,1],
+        args: [0.7,1,0.5],
+        rotation: [0, Math.PI/4,0]
     }))
 
     return(

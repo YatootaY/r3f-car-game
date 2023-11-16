@@ -1,4 +1,5 @@
 import { usePlane } from "@react-three/cannon"
+import Walls from "./Walls"
 
 const Ground = () => {
 
@@ -13,6 +14,7 @@ const Ground = () => {
                 <planeGeometry args={[40,40]}/>
                 <meshStandardMaterial color="#f79000"/>
             </mesh>
+            <Walls/>
         </>
     )
 }

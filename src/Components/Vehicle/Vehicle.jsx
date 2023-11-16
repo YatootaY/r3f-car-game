@@ -36,24 +36,33 @@ const Vehicle = () => {
     const [subscribeKey, getKeys] = useKeyboardControls()
 
     useFrame((state, delta) => {
-        const {forward, backward, leftward, rightward, brake } = getKeys()
+        const {forward, backward, leftward, rightward, brake, boost } = getKeys()
+
+        let enginePower = 300
+        let steeringValue = 0.36
+
+        if (boost){
+            enginePower = 600
+            steeringValue = 0.6
+        }
+
         if (forward) {
-            vehicleApi.applyEngineForce(-300, 1);
-            vehicleApi.applyEngineForce(-300, 0);
+            vehicleApi.applyEngineForce(-enginePower, 1);
+            vehicleApi.applyEngineForce(-enginePower, 0);
         } else if (backward) {
-            vehicleApi.applyEngineForce(300, 1);
-            vehicleApi.applyEngineForce(300, 0);
+            vehicleApi.applyEngineForce(enginePower, 1);
+            vehicleApi.applyEngineForce(enginePower, 0);
         } else {
             vehicleApi.applyEngineForce(0, 1);
             vehicleApi.applyEngineForce(0, 0);
         }
 
         if (leftward) {
-            vehicleApi.setSteeringValue(0.35, 2);
-            vehicleApi.setSteeringValue(0.35, 3);
+            vehicleApi.setSteeringValue(steeringValue, 2);
+            vehicleApi.setSteeringValue(steeringValue, 3);
         } else if (rightward) {
-            vehicleApi.setSteeringValue(-0.35, 2);
-            vehicleApi.setSteeringValue(-0.35, 3);
+            vehicleApi.setSteeringValue(-steeringValue, 2);
+            vehicleApi.setSteeringValue(-steeringValue, 3);
         } else {
             vehicleApi.setSteeringValue(0, 2);
             vehicleApi.setSteeringValue(0, 3);
@@ -62,6 +71,7 @@ const Vehicle = () => {
         const brakeMultipler = brake ? 1e5 : 0;
         vehicleApi.setBrake(brakeMultipler, 1);
         vehicleApi.setBrake(brakeMultipler, 0);
+
         
     })
 

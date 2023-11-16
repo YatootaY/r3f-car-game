@@ -13,6 +13,7 @@ function App() {
           {name: "backward", keys: ["ArrowDown", "KeyS"]},
           {name: "leftward", keys: ["ArrowLeft", "KeyA"]},
           {name: "rightward", keys: ["ArrowRight", "KeyD"]},
+          {name: "boost", keys: ["Shift"]},
           {name: "brake", keys: ["Space"]}
         ]}
       >
@@ -22,10 +23,10 @@ function App() {
             fov: 45,
             near: 0.1,
             far: 200,
-            position: [2.5,8,20]
+            position: [25,20,25]
           }}
         >
-          <fog attach="fog" color="#f79000" near={1} far={80} />
+          <fog attach="fog" color="#f79000" near={1} far={100} />
           <Experience/>
         </Canvas>
       </KeyboardControls>
