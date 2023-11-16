@@ -1,5 +1,4 @@
 import { usePlane } from "@react-three/cannon"
-import Farm from "./Farm"
 
 const Ground = () => {
 
@@ -12,9 +11,8 @@ const Ground = () => {
         <>
             <mesh receiveShadow ref={ref}>
                 <planeGeometry args={[50,50]}/>
-                <meshStandardMaterial color="orange"/>
+                <meshStandardMaterial color="#f79000"/>
             </mesh>
-            <Farm/>
         </>
     )
 }

@@ -21,7 +21,7 @@ const Farm = () => {
     const [windMill] = useBox(() => ({
         mass:1,
         args: [3,12,3],
-        position: [5,6,0]
+        position: [5,6,-5]
     }))
 
     const [wall1] = useBox(() => ({
@@ -58,7 +58,7 @@ const Farm = () => {
             <mesh scale={5} ref={windMill}>
                 <group >
                     <mesh {...nodes.WindMill} position={[0,0.4,0.1]}/>
-                    <mesh {...nodes.WindMill001}  position={[0,0.7,0.1]}/>
+                    <mesh {...nodes.WindMill001}  position={[0,0.7,0.2]}/>
                 </group>
             </mesh>
             

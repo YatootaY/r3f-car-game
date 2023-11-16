@@ -12,7 +12,7 @@ const Vehicle = () => {
     const width = 1.5
     const height = 1
     const front = 1.4
-    const position = [0,10,10]
+    const position = [0,2,10]
     const wheelRadius = 0.3;
 
     const chassisBodyArgs = [width, height, front * 2]
@@ -22,6 +22,7 @@ const Vehicle = () => {
         args: chassisBodyArgs,
         mass: 150,
         position,
+        rotation: [0, Math.PI, 0]
     }), useRef())
 
     const [wheels, wheelInfos] = useWheels(width, height, front, wheelRadius)
