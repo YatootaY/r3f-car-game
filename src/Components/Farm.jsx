@@ -12,13 +12,13 @@ const Farm = () => {
 
     const [barn] = useBox(() => ({
         args: [3,4,5],
-        position:[0,2,0],
+        position:[-1,2,-2],
         mass:1
     }))
 
     const [well] = useBox(() => ({
         args: [1.5,2,1.5],
-        position: [10,1,0],
+        position: [4,1,-1],
         mass:1
     }))
 
@@ -26,18 +26,6 @@ const Farm = () => {
         mass:1,
         args: [3,12,3],
         position: [5,6,-5]
-    }))
-
-    const [wall1] = useBox(() => ({
-        type: "Static",
-        args: [0.2,0.8,19.5],
-        position: [-4.7,0.4,-2.7]
-    }))
-
-    const [wall2] = useBox(() => ({
-        type: "Static",
-        args: [12.7,0.8,0.2],
-        position: [1.7,0.4,-12.35]
     }))
 
     useFrame((state, delta) => {
@@ -53,12 +41,6 @@ const Farm = () => {
                     <mesh {...nodes.Barn_01} position={[0,0,0]}/>
                     <mesh {...nodes.Plane} position={[0,0.63,0.5]} ref={plane}/>
                 </group>
-            </mesh>
-
-            <mesh scale={5}>
-                <mesh {...nodes.Fence_White013}/>
-                <mesh ref={wall1}/>
-                <mesh ref={wall2}/>
             </mesh>
             
             <mesh scale={5} ref={well}>
