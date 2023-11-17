@@ -9,8 +9,6 @@ const Ground = () => {
         rotation: [-Math.PI / 2, 0,0]}
     ))
 
-    const color = "#6a2e00"
-
     return(
         <>
             <mesh receiveShadow ref={ref}>
@@ -31,7 +29,7 @@ const Ground = () => {
                     lineHeight={1.2}
                 >
                     {`W - Forward\nS - Backward\nA - Turn Left\nD - Turn Right\nSpace - Brake`}
-                    <meshBasicMaterial color={color}/>
+                    <meshBasicMaterial color="#6a2e00"/>
                 </Text>
             </mesh>
         </>

@@ -1,5 +1,9 @@
 import { useBox } from "@react-three/cannon"
 import { Text3D, Center } from "@react-three/drei"
+import * as THREE from 'three'
+
+THREE.ColorManagement.legacyMode = false
+const textMaterial = new THREE.MeshStandardMaterial({color:"white"})
 
 const Text = () => {
 
@@ -60,9 +64,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         W
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -72,9 +76,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         E
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -84,9 +88,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         L
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -96,9 +100,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         C
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -108,9 +112,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         O
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -120,9 +124,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         M
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>
@@ -132,9 +136,9 @@ const Text = () => {
                     <Text3D 
                         font={"/gt.json"} 
                         height={0.5}
+                        material={textMaterial}
                     >
                         E
-                        <meshStandardMaterial color="white"/>
                     </Text3D>
                 </Center>
             </mesh>

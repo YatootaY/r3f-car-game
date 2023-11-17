@@ -23,7 +23,7 @@ function App() {
             fov: 45,
             near: 0.1,
             far: 200,
-            position: [25,20,25]
+            position: [30,30,30]
           }}
         >
           <fog attach="fog" color="#f79000" near={1} far={150} />
