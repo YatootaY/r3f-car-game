@@ -1,6 +1,7 @@
 import { usePlane } from "@react-three/cannon"
 import Walls from "./Walls"
 import { Text } from "@react-three/drei"
+import Trees from "./Trees"
 
 const Ground = () => {
 
@@ -13,8 +14,9 @@ const Ground = () => {
         <>
             <mesh receiveShadow ref={ref}>
                 <planeGeometry args={[40,40]}/>
-                <meshStandardMaterial color="#f79000"/>
+                <meshStandardMaterial color="#ff922c"/>
             </mesh>
+            <Trees/>
             <Walls/>
             <mesh
                 position={[8,0.01,10]} 
