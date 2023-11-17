@@ -10,25 +10,25 @@ const Trees = () => {
 
     const [tree1Body1] = useBox(() => ({
         mass: 1,
-        args: [2,4.6,2],
+        args: [1,4.6,1],
         position: [16,2.3,7]
     }))
 
     const [tree1Body2] = useBox(() => ({
         mass: 1,
-        args: [2,4.6,2],
+        args: [1,4.6,1],
         position: [-4,2.3,4]
     }))
 
     const [tree2Body1] = useBox(() => ({
         mass: 1,
-        args: [2,5.2,2],
+        args: [1,5.2,1],
         position: [3,2.6,1]
     }))
 
     const [tree3Body1] = useBox(() => ({
         mass: 1,
-        args: [1.8,5.2,1.8],
+        args: [1,5.2,1],
         position: [-10,2.6,-5]
     }))
 

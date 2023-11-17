@@ -3,6 +3,7 @@ import Walls from "./Walls"
 import { Text } from "@react-three/drei"
 import Trees from "./Trees"
 import Fence from "./Fence"
+import Camp from "./Camp"
 
 const Ground = () => {
 
@@ -19,6 +20,7 @@ const Ground = () => {
             </mesh>
             <Trees/>
             <Fence/>
+            <Camp/>
             <Walls/>
             <mesh
                 position={[8,0.01,10]} 
