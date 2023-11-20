@@ -12,20 +12,20 @@ const Farm = () => {
 
     const [barn] = useBox(() => ({
         args: [3,4,5],
-        position:[-1,2,-2],
+        position:[-1,2.2,-2],
         mass:1
     }))
 
     const [well] = useBox(() => ({
         args: [1.5,2,1.5],
-        position: [4,1,-1],
+        position: [4,1.2,-1],
         mass:1
     }))
 
     const [windMill] = useBox(() => ({
         mass:1,
         args: [3,12,3],
-        position: [5,6,-5]
+        position: [5,6.2,-5]
     }))
 
     useFrame((state, delta) => {
