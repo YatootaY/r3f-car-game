@@ -22,8 +22,7 @@ function App() {
           camera={{
             fov: 45,
             near: 0.1,
-            far: 200,
-            position: [30,30,30]
+            far: 200
           }}
         >
           <fog attach="fog" color="#f79000" near={1} far={180} />
