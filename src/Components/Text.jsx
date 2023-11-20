@@ -1,59 +1,70 @@
 import { useBox } from "@react-three/cannon"
 import { Text3D, Center } from "@react-three/drei"
+import { useState } from "react"
 import * as THREE from 'three'
+import { playAudio } from "../Util"
 
 THREE.ColorManagement.legacyMode = false
 const textMaterial = new THREE.MeshStandardMaterial({color:"white"})
 
 const Text = () => {
 
+    const [audio] = useState(() => new Audio("./assets/hit.mp3"))
+
     const [text1] = useBox(() => ({
         mass: 1,
         position: [-0.2,1,7],
         args: [1.2,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text2] = useBox(() => ({
         mass: 1,
         position: [1,1,6],
         args: [0.8,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text3] = useBox(() => ({
         mass: 1,
         position: [2,1,5],
         args: [0.8,1,0.5],
-        rotation: [-30, Math.PI/4,0]
+        rotation: [-30, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text4] = useBox(() => ({
         mass: 1,
         position: [3,1,4],
         args: [0.8,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text5] = useBox(() => ({
         mass: 1,
         position: [4.1,1,3],
         args: [1,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text6] = useBox(() => ({
         mass: 1,
         position: [5.3,1,2],
         args: [1,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     const [text7] = useBox(() => ({
         mass: 1,
         position: [6.3,1,1],
         args: [0.7,1,0.5],
-        rotation: [0, Math.PI/4,0]
+        rotation: [0, Math.PI/4,0],
+        onCollide: (e) => playAudio(e,audio)
     }))
 
     return(
