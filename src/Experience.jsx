@@ -1,4 +1,4 @@
-import {OrbitControls} from "@react-three/drei"
+import {OrbitControls, Sparkles} from "@react-three/drei"
 import Ground from "./Components/Ground"
 import Lights from "./Components/Lights"
 import Vehicle from "./Components/Vehicle/Vehicle"
@@ -32,6 +32,14 @@ const Experience = () => {
             <OrbitControls makeDefault/>
             
             <Lights/>
+            <Sparkles
+                count={50}
+                size={25}
+                speed={2}
+                noise={2}
+                scale={[30,5,30]}
+                position-y={3}
+            />
             <Physics>
                     <Vehicle/>
                     <Farm/>
