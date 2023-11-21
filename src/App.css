@@ -8,6 +8,10 @@ body,
   height: 100%;
 }
 
+html{
+  background-color: #efb35f;
+}
+
 canvas{
   touch-action: none;
   background-color: #efb35f;

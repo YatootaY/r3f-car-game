@@ -1,7 +1,8 @@
-import { KeyboardControls } from '@react-three/drei'
+import { KeyboardControls, Loader } from '@react-three/drei'
 import './App.css'
 import Experience from './Experience'
 import { Canvas } from "@react-three/fiber"
+import { Suspense } from 'react'
 
 function App() {
 
@@ -26,8 +27,13 @@ function App() {
           }}
         >
           <fog attach="fog" color="#efb35f" near={1} far={180} />
-          <Experience/>
+          <Suspense fallback={null}>
+            <Experience/>
+          </Suspense>
         </Canvas>
+        <Loader
+          containerStyles={{"background-color": "#efb35f"}}
+        />
       </KeyboardControls>
     </>
   )
