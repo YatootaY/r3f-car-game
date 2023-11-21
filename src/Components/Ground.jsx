@@ -16,7 +16,7 @@ const Ground = () => {
         <>
             <mesh receiveShadow ref={ref}>
                 <planeGeometry args={[40,40]}/>
-                <meshStandardMaterial color="#ff922c"/>
+                <meshStandardMaterial color="#e5be87"/>
             </mesh>
             <Trees/>
             <Fence/>
@@ -35,7 +35,7 @@ const Ground = () => {
                     lineHeight={1.2}
                 >
                     {`W - Forward\nS - Backward\nA - Turn Left\nD - Turn Right\nSpace - Brake`}
-                    <meshBasicMaterial color="#6a2e00"/>
+                    <meshBasicMaterial color="#403e3c"/>
                 </Text>
             </mesh>
         </>

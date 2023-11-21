@@ -2,7 +2,7 @@ import { useBox } from "@react-three/cannon"
 
 const Walls = () => {
 
-    const color = "#c46f2f"
+    const color = "#918866"
 
     const [wall1] = useBox(() => ({
         type: "Static",

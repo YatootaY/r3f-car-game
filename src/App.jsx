@@ -25,7 +25,7 @@ function App() {
             far: 200
           }}
         >
-          <fog attach="fog" color="#f79000" near={1} far={180} />
+          <fog attach="fog" color="#efb35f" near={1} far={180} />
           <Experience/>
         </Canvas>
       </KeyboardControls>

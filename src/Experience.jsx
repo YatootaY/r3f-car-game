@@ -20,7 +20,7 @@ const Experience = () => {
         backgroudMusic.loop = true
         backgroudMusic.volume = 0.1
         backgroudMusic.play()
-    }, [])
+    }, [backgroudMusic])
 
     useFrame((state, delta) => {
         smoothedCameraPosition.lerp(currentCameraPosition, 2*delta)
