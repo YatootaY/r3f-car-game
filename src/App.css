@@ -16,3 +16,14 @@ canvas{
   touch-action: none;
   background-color: #efb35f;
 }
+
+.interface{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.interface img{
+  width: 20px;
+  cursor: pointer;
+}

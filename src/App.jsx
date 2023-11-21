@@ -3,6 +3,7 @@ import './App.css'
 import Experience from './Experience'
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from 'react'
+import Interface from './Components/Interface'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Experience/>
           </Suspense>
         </Canvas>
+        <Interface/>
         <Loader
           containerStyles={{ backgroundColor: "#efb35f"}}
         />
