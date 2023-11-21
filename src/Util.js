@@ -4,7 +4,7 @@ export const playAudio = (e, audio) => {
     if (impactStrength < 1) {
         return
     }
-    const normalizedImpactStrength = Math.min(1, impactStrength / 10);
+    const normalizedImpactStrength = Math.min(1, impactStrength / 15);
     audio.currentTime = 0
     audio.volume = normalizedImpactStrength
     audio.play()
