@@ -19,7 +19,6 @@ function App() {
         ]}
       >
         <Canvas
-          shadows
           camera={{
             fov: 45,
             near: 0.1,
@@ -32,7 +31,7 @@ function App() {
           </Suspense>
         </Canvas>
         <Loader
-          containerStyles={{"background-color": "#efb35f"}}
+          containerStyles={{ backgroundColor: "#efb35f"}}
         />
       </KeyboardControls>
     </>

@@ -1,4 +1,4 @@
-import {OrbitControls, Sparkles} from "@react-three/drei"
+import {Sparkles} from "@react-three/drei"
 import Ground from "./Components/Ground"
 import Lights from "./Components/Lights"
 import Vehicle from "./Components/Vehicle/Vehicle"
@@ -12,8 +12,8 @@ import { useEffect } from "react"
 
 const Experience = () => {
 
-    const [smoothedCameraPosition] = useState(()=> new THREE.Vector3(150,150,150))
-    const [currentCameraPosition] = useState(()=> new THREE.Vector3(30,30,30))
+    const [smoothedCameraPosition] = useState(()=> new THREE.Vector3(-200,200,200))
+    const [currentCameraPosition] = useState(()=> new THREE.Vector3(33,34,32))
     const [backgroudMusic] = useState(() => new Audio("./assets/backgroundMusic.mp3"))
 
     useEffect(() => {
@@ -25,12 +25,11 @@ const Experience = () => {
     useFrame((state, delta) => {
         smoothedCameraPosition.lerp(currentCameraPosition, 2*delta)
         state.camera.position.copy(smoothedCameraPosition)
+        state.camera.lookAt(0,0,0)
     })
 
     return(
         <>
-            <OrbitControls makeDefault/>
-            
             <Lights/>
             <Sparkles
                 count={50}
