@@ -9,18 +9,24 @@ import { useFrame } from "@react-three/fiber"
 import { useState } from "react"
 import * as THREE from "three"
 import { useEffect } from "react"
+import useStore from "./States/store"
 
 const Experience = () => {
 
     const [smoothedCameraPosition] = useState(()=> new THREE.Vector3(-200,200,200))
     const [currentCameraPosition] = useState(()=> new THREE.Vector3(33,34,32))
     const [backgroudMusic] = useState(() => new Audio("./assets/backgroundMusic.mp3"))
+    const {audio} = useStore()
 
     useEffect(() => {
         backgroudMusic.loop = true
         backgroudMusic.volume = 0.1
-        backgroudMusic.play()
-    }, [backgroudMusic])
+        if (audio){
+            backgroudMusic.play()
+        }else{
+            backgroudMusic.pause()
+        }
+    }, [backgroudMusic,audio])
 
     useFrame((state, delta) => {
         smoothedCameraPosition.lerp(currentCameraPosition, 2*delta)
