@@ -1,47 +1,38 @@
 import { useBox } from "@react-three/cannon"
 import {Text} from "@react-three/drei"
-import { useState } from "react"
 import * as THREE from "three"
-import { playAudio } from "../Util"
 
 const material = new THREE.MeshStandardMaterial({color:"white"})
 const Keys = () => {
 
-    const [audio] = useState(() => new Audio("./assets/hit.mp3"))
-
     const [keyW] = useBox(() => ({
         mass: 1,
         args: [1.4,0.8,1.4],
-        position: [11,0.4,10],
-        onCollide: (e) => playAudio(e, audio)
+        position: [11,0.4,10]
     }))
 
     const [keyS] = useBox(() => ({
         mass: 1,
         args: [1.4,0.8,1.4],
-        position: [12.6,0.4,10],
-        onCollide: (e) => playAudio(e, audio)
+        position: [12.6,0.4,10]
     }))
 
     const [keyD] = useBox(() => ({
         mass: 1,
         args: [1.4,0.8,1.4],
-        position: [12.6,0.4,8.4],
-        onCollide: (e) => playAudio(e, audio)
+        position: [12.6,0.4,8.4]
     }))
 
     const [keyA] = useBox(() => ({
         mass: 1,
         args: [1.4,0.8,1.4],
-        position: [12.6,0.4,11.6],
-        onCollide: (e) => playAudio(e, audio)
+        position: [12.6,0.4,11.6]
     }))
 
     const [keySpace] = useBox(() => ({
         mass: 1,
         args: [1.4,0.8,4.6],
-        position: [14.2,0.4,10],
-        onCollide: (e) => playAudio(e, audio)
+        position: [14.2,0.4,10]
     }))
 
     return(
